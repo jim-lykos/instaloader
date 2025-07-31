@@ -110,6 +110,15 @@ already have a valid session cookie file.
 
 `Instaloader Documentation <https://instaloader.github.io/basic-usage.html>`__
 
+Simple GUI Example
+------------------
+
+Instaloader is primarily a command line tool, but the repository now also
+contains a minimal Tkinter-based graphical interface. Run ``gui_instaloader.py``
+to enter your credentials, specify a profile and choose a download directory.
+Press **Download** to fetch the selected profile with your session.
+
+
 Contributing
 ------------
 
