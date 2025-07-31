@@ -64,7 +64,8 @@ class InstaloaderGUI:
             os.makedirs(directory, exist_ok=True)
             loader = instaloader.Instaloader(dirname_pattern=os.path.join(directory, "{target}"))
             loader.login(username, password)
-            loader.download_profiles({profile}, profile_pic=True)
+            profile_obj = instaloader.Profile.from_username(loader.context, profile)
+            loader.download_profiles({profile_obj}, profile_pic=True)
             messagebox.showinfo("Success", f"Download completed in {directory}.")
         except Exception as exc:  # pragma: no cover - GUI usage only
             messagebox.showerror("Error", f"An error occurred: {exc}")
